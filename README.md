@@ -2,6 +2,8 @@
 
 Analysis and documentation to support the use of our data generation tool.
 
+The source code for the tool itself can be found at [`network-data-generation`](https://github.com/parkeraddison/network-data-generation).
+
 **Table of contents:**
 - [Getting started](#getting-started)
   - [Requirements](#requirements)
@@ -16,7 +18,9 @@ Analysis and documentation to support the use of our data generation tool.
 
 You can start using this tool and conducting analysis of different network conditions by running:
 ```bash
-git clone https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions --recursive
+git clone \
+https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions.git \
+--recursive
 ```
 
 ### Requirements
@@ -43,15 +47,15 @@ See [`tool.json`](config/tool.json) for configuration:
 
 | Key | Description |
 | --- | --- |
-| behaviors | List of one or more target behaviors. All target behaviors will be run for each specified set of network conditions. For possible values see [target-behavior]. |
-| conditions | List of nested configuration specifying desired network conditions. E.g. `[{"latency": "50ms", "bandwidth": "10Mbps"}]`. For configuration see [condition-config]. |
-| vpn | Nested configuration for a VPN connection. For configuration see [vpn-config]. |
+| behaviors | List of one or more target behaviors. All target behaviors will be run for each specified set of network conditions. For possible values see [Target behaviors](#target-behaviors). |
+| conditions | List of nested configuration specifying desired network conditions. E.g. `[{"latency": "50ms", "bandwidth": "10Mbps"}]`. For configuration see [Conditions config](#conditions-config). |
+| vpn | Nested configuration for a VPN connection. For configuration see [vpn-config](#VPN config). |
 | envFile | Filepath to a file used to store secret environment variables such as VPN and website login information. **TODO** |
 | dataDir | Path to directory where the data will be collected. **WIP** |
 
-[target-behavior]: <>
-
-| target-behavior | Description |
+<a name="target-behaviors"></a>
+**Target behaviors**
+| Value | Description |
 | --- | --- |
 | ping | Ping a DNS server once every three seconds. |
 | script | Run a script that replicates the `ping` behavior. **Will be deprecated**. |
@@ -59,16 +63,16 @@ See [`tool.json`](config/tool.json) for configuration:
 | browsing | Run a script to endlessly browse Twitter. **WIP** |
 | streaming | Run a script to endlessly watch YouTube. **WIP** |
 
-[condition-config]: <>
-
-| condition-config | Description |
+<a name="conditions-config"></a>
+**Conditions config**
+| Key | Description |
 | --- | --- |
 | latency | Milliseconds. The desired amount of network latency to be injected. E.g. `"50ms"` |
 | bandwidth | Megabits per second. The desired download speed. E.g. `"10Mbps"` |
 
-[vpn-config]: <>
-
-| vpn-config | Description |
+<a name="vpn-config"></a>
+**VPN config**
+| Key | Description |
 | --- | --- |
 | enabled | `true` or `false`. Whether or not a VPN should be used. **WIP** |
 | server | URL or IP to the desired VPN service. E.g. `"vpn.ucsd.edu"`. **WIP** |
@@ -97,4 +101,13 @@ Once data is collected, analysis can be done to demonstrate disparity in the dat
 
 If you choose to use this tool, please cite it with the following BibTeX entry: **WIP**
 ```bibtex
+@misc{tbd2021,
+  author = {Addison, Parker and
+            Altekar, Sahil and
+            Yaseen, Danial},
+  title  = {tbd},
+  school = {University of California, San Diego},
+  year   = 2021,
+  url    = {https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions}
+}
 ```
