@@ -10,6 +10,7 @@ Analysis and documentation to support the use of our data generation tool.
   - [Running](#running)
   - [Data](#data)
 - [Generating analysis](#generating-analysis)
+- [Citing](#citing)
 
 ## Getting started
 
@@ -48,7 +49,8 @@ See [`tool.json`](config/tool.json) for configuration:
 | envFile | Filepath to a file used to store secret environment variables such as VPN and website login information. **TODO** |
 | dataDir | Path to directory where the data will be collected. **WIP** |
 
-[target-behavior]: []
+[target-behavior]: <>
+
 | target-behavior | Description |
 | --- | --- |
 | ping | Ping a DNS server once every three seconds. |
@@ -57,13 +59,15 @@ See [`tool.json`](config/tool.json) for configuration:
 | browsing | Run a script to endlessly browse Twitter. **WIP** |
 | streaming | Run a script to endlessly watch YouTube. **WIP** |
 
-[condition-config]: []
+[condition-config]: <>
+
 | condition-config | Description |
 | --- | --- |
 | latency | Milliseconds. The desired amount of network latency to be injected. E.g. `"50ms"` |
 | bandwidth | Megabits per second. The desired download speed. E.g. `"10Mbps"` |
 
-[vpn-config]: []
+[vpn-config]: <>
+
 | vpn-config | Description |
 | --- | --- |
 | enabled | `true` or `false`. Whether or not a VPN should be used. **WIP** |
@@ -71,13 +75,26 @@ See [`tool.json`](config/tool.json) for configuration:
 
 ### Running
 
-Once the tool is configured
+Once you're satisfied with your configuration, simply open a terminal to this directory, and run
+```bash
+make
+```
+
+When you're done collecting data, open a new terminal in this directory and run
+```bash
+make stop
+```
 
 ### Data
 
-
+After the tool has been stopped, data can be found in `tool/data/`.
 
 ## Generating analysis
 
 Once data is collected, analysis can be done to demonstrate disparity in the data between different network conditions. **WIP**
 
+## Citing
+
+If you choose to use this tool, please cite it with the following BibTeX entry: **WIP**
+```bibtex
+```
