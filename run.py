@@ -4,10 +4,6 @@
 # For checkpoint purposes in the data science capstone course.
 #
 
-
-# TODO: ADD `TEST` TARGET; ADD .ENV FILE CONFIGURATION; TEST IN DSMLP
-
-
 import argparse
 import subprocess
 

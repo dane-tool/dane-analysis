@@ -7,7 +7,8 @@ init:
 	docker run \
 	-it --rm -v $(PWD):/home \
 	parkeraddison/netem-init \
-	python tool/setup/build_compose.py -s tool/ -c config/tool.json
+	python tool/setup/build_compose.py \
+	-s tool/ -c config/tool.json -e $(PWD)/.env -o $(PWD)/data/
 
 .PHONY: build
 build:

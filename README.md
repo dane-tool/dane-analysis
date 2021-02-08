@@ -9,9 +9,11 @@ The source code for the tool itself can be found at [`network-data-generation`](
   - [Requirements](#requirements)
 - [Using the tool](#using-the-tool)
   - [Configuration](#configuration)
+  - [Environment file and secrets](#environment-file-and-secrets)
   - [Running](#running)
   - [Data](#data)
 - [Generating analysis](#generating-analysis)
+- [FAQ](#faq)
 - [Citing](#citing)
 
 ## Getting started
@@ -49,9 +51,7 @@ See [`tool.json`](config/tool.json) for configuration:
 | --- | --- |
 | behaviors | List of one or more target behaviors. All target behaviors will be run for each specified set of network conditions. For possible values see [Target behaviors](#target-behaviors). |
 | conditions | List of nested configuration specifying desired network conditions. E.g. `[{"latency": "50ms", "bandwidth": "10Mbps"}]`. For configuration see [Conditions config](#conditions-config). |
-| vpn | Nested configuration for a VPN connection. For configuration see [vpn-config](#VPN config). |
-| envFile | Filepath to a file used to store secret environment variables such as VPN and website login information. **TODO** |
-| dataDir | Path to directory where the data will be collected. **WIP** |
+| vpn | Nested configuration for a VPN connection. For configuration see [VPN Config](#vpn-config). |
 
 <a name="target-behaviors"></a>
 **Target behaviors**
@@ -77,6 +77,17 @@ See [`tool.json`](config/tool.json) for configuration:
 | enabled | `true` or `false`. Whether or not a VPN should be used. **WIP** |
 | server | URL or IP to the desired VPN service. E.g. `"vpn.ucsd.edu"`. **WIP** |
 
+### Environment file and secrets
+
+The containers will need secret variables that store things like VPN or website login credentials.
+
+Please create a file named `.env` and place it in this directory. Inside the file, add the login information for your VPN:
+```
+VPN_USERNAME=<your UCSD username>
+VPN_USERGROUP=<the 'group' to use for the VPN -- probably "2-Step Secured - allthruucsd">
+VPN_PASSWORD=<your UCSD password>
+```
+
 ### Running
 
 Once you're satisfied with your configuration, simply open a terminal to this directory, and run
@@ -91,11 +102,19 @@ make stop
 
 ### Data
 
-After the tool has been stopped, data can be found in `tool/data/`.
+After the tool has been stopped, data can be found in `data/`.
 
 ## Generating analysis
 
 Once data is collected, analysis can be done to demonstrate disparity in the data between different network conditions. **WIP**
+
+## FAQ
+
+1. **The tool isn't working. It fails silently, or fails to launch behaviors or network-stats.**
+   Make sure that all submodules have been cloned. You can do this by running
+   ```bash
+   git submodule update --init --recursive
+   ```
 
 ## Citing
 
