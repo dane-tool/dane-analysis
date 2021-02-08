@@ -60,8 +60,8 @@ See [`tool.json`](config/tool.json) for configuration:
 | ping | Ping a DNS server once every three seconds. |
 | script | Run a script that replicates the `ping` behavior. **Will be deprecated**. |
 | none | Do nothing. |
-| browsing | Run a script to endlessly browse Twitter. **WIP** |
-| streaming | Run a script to endlessly watch YouTube. **WIP** |
+| browsing | Run a script to endlessly browse Twitter. |
+| streaming | Run a script to endlessly watch YouTube. |
 
 <a name="conditions-config"></a>
 **Conditions config**

@@ -1,6 +1,6 @@
 {
     "behaviors": [
-        "ping"
+        "streaming"
     ],
     "conditions": [
         {
