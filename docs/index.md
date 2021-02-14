@@ -1,10 +1,7 @@
-# Generating and Analyzing Network Traffic in Diverse Network Conditions
-General Info TODO
-
-## Background
+# Background
 TODO
 
-## Tool
+# Tool
 Our tool establishes Docker containers with configurable network conditions,
 then runs target behaviors such as browsing the internet, and collects data on
 the network traffic generated using
@@ -77,17 +74,15 @@ When you're done collecting data, open a new terminal in this directory and run
 make stop
 ```
 
-#### Example
+### Example
 
-<img
-src="https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions/blob/main/docs/media/demo.gif"
-alt = "example demo" width="1000">
+![](../docs/media/demo.gif)
 
 ### Data
 
 After the tool has been stopped, data can be found in `data/`.
 
 
-## Analysis
+# Analysis
 TODO
 
