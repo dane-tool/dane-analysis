@@ -11,13 +11,13 @@ To use the tool, you must configure your desired network conditions and behavior
 
 Source code for the tool can be found at [network-data-generation](https://github.com/parkeraddison/network-data-generation).
 
-## Requirements
+### Requirements
 The data collcetion tool runs on Linux. You will need:
 * [Docker 19.03+](https://docs.docker.com/get-docker/)
 * [Docker Compose 1.27+](https://docs.docker.com/compose/install/)
 * [GNU Make](https://www.gnu.org/software/make/)
 
-## Configuration
+### Configuration
 See [tool.json](tool.json) for configuration:
 
 | Key | Description |
@@ -27,7 +27,7 @@ run for each specified set of network conditions. For possible values see [Targe
 | conditions | TODO |
 | vpn | TODO |
 
-## Setup
+### Setup
 TODO
 
 # Analysis
