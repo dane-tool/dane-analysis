@@ -1,4 +1,5 @@
-# **Generating and Analyzing Network Traffic in Diverse Network Conditions**
+<h1 align="center"> Generating and Analyzing Network Traffic in Diverse Network
+Conditions </h1>
 
 # Background
 TODO
