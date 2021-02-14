@@ -18,16 +18,66 @@ The data collcetion tool runs on Linux. You will need:
 * [GNU Make](https://www.gnu.org/software/make/)
 
 ### Configuration
-See [tool.json](tool.json) for configuration:
+
+See [`tool.json`](config/tool.json) for configuration:
 
 | Key | Description |
 | --- | --- |
-| behaviors | List of one or more target behaviors. All target behaviors will be run for each specified set of network conditions. For possible values see [Target behaviors](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions#target-behaviors). |
-| conditions | TODO |
-| vpn | TODO |
+| behaviors | List of one or more target behaviors. All target behaviors will be run for each specified set of network conditions. For possible values see [Target behaviors](#target-behaviors). |
+| conditions | List of nested configuration specifying desired network conditions. E.g. `[{"latency": "50ms", "bandwidth": "10Mbps"}]`. For configuration see [Conditions config](#conditions-config). |
+| vpn | Nested configuration for a VPN connection. For configuration see [VPN Config](#vpn-config). |
 
-### Setup
-TODO
+<a name="target-behaviors"></a>
+**Target behaviors**
+| Value | Description |
+| --- | --- |
+| ping | Ping a DNS server once every three seconds. |
+| script | Run a script that replicates the `ping` behavior. **Will be deprecated**. |
+| none | Do nothing. |
+| browsing | Run a script to endlessly browse Twitter. |
+| streaming | Run a script to endlessly watch YouTube. |
+
+<a name="conditions-config"></a>
+**Conditions config**
+| Key | Description |
+| --- | --- |
+| latency | Milliseconds. The desired amount of network latency to be injected. E.g. `"50ms"` |
+| bandwidth | Megabits per second. The desired download speed. E.g. `"10Mbps"` |
+
+<a name="vpn-config"></a>
+**VPN config**
+| Key | Description |
+| --- | --- |
+| enabled | `true` or `false`. Whether or not a VPN should be used. **WIP** |
+| server | URL or IP to the desired VPN service. E.g. `"vpn.ucsd.edu"`. **WIP** |
+
+### Environment file and secrets
+
+The containers will need secret variables that store things like VPN or website login credentials.
+
+Please create a file named `.env` and place it in this directory. Inside the file, add the login information for your VPN:
+```
+VPN_USERNAME=<your UCSD username>
+VPN_USERGROUP=<the 'group' to use for the VPN -- probably "2-Step Secured - allthruucsd">
+VPN_PASSWORD=<your UCSD password>
+```
+
+### Running
+
+Once you're satisfied with your configuration, simply open a terminal to this directory, and run
+```bash
+make
+```
+
+When you're done collecting data, open a new terminal in this directory and run
+```bash
+make stop
+```
+
+### Data
+
+After the tool has been stopped, data can be found in `data/`.
+
 
 # Analysis
 TODO
