@@ -1,5 +1,5 @@
-<h1 align="center"> Generating and Analyzing Network Traffic in Diverse Network
-Conditions </h1>
+<h1 align="center"><b><u>Generating and Analyzing Network Traffic in Diverse
+Network Conditions</u></b> </h1>
 
 # Background
 TODO
