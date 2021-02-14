@@ -5,7 +5,7 @@ Todo
 Our tool establishes Docker containers with configurable network conditions,
 then runs target behaviors such as browsing the internet, and collects data on
 the network traffic generated using
-[https://github.com/parkeraddison/network-stats/tree/5e4173d310faf40b7f35262e0a18e447ba91e5dc](network-stats).
+[network-stats](https://github.com/parkeraddison/network-stats/tree/5e4173d310faf40b7f35262e0a18e447ba91e5dc).
 
 To use the tool, you must configure your desired network conditions and behaviors.
 
