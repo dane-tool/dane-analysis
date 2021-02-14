@@ -19,7 +19,7 @@ The data collcetion tool runs on Linux. You will need:
 
 ### Configuration
 
-See [`tool.json`](config/tool.json) for configuration:
+See [`tool.json`](../config/tool.json) for configuration:
 
 | Key | Description |
 | --- | --- |
