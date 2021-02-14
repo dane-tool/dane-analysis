@@ -1,6 +1,6 @@
-<h1 align="center"><b><u>Generating and Analyzing Network Traffic in Diverse
-Network Conditions</u></b> </h1>
-
+<h1 align="center"><b>Generating and Analyzing Network Traffic in Diverse
+Network Conditions</b> </h1>
+<hr>
 # Background
 TODO
 
