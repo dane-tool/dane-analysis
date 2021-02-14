@@ -19,7 +19,7 @@ The data collcetion tool runs on Linux. You will need:
 
 ### Configuration
 
-See [`tool.json`](../config/tool.json) for configuration:
+See [`tool.json`](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions/blob/main/config/tool.json) for configuration:
 
 | Key | Description |
 | --- | --- |
@@ -73,6 +73,10 @@ When you're done collecting data, open a new terminal in this directory and run
 ```bash
 make stop
 ```
+
+#### Example
+
+![](docs/media/demo.gif)
 
 ### Data
 
