@@ -17,6 +17,14 @@ The data collcetion tool runs on Linux. You will need:
 * [Docker Compose 1.27+](https://docs.docker.com/compose/install/)
 * [GNU Make](https://www.gnu.org/software/make/)
 
+### Getting Started
+You can start using this tool and conducting analysis of different network conditions by running:
+```bash
+git clone \
+https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions.git \
+--recursive
+```
+
 ### Configuration
 
 See [`tool.json`](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions/blob/main/config/tool.json) for configuration:
@@ -29,6 +37,7 @@ See [`tool.json`](https://github.com/parkeraddison/generating-and-analyzing-netw
 
 <a name="target-behaviors"></a>
 **Target behaviors**
+
 | Value | Description |
 | --- | --- |
 | ping | Ping a DNS server once every three seconds. |
@@ -39,6 +48,7 @@ See [`tool.json`](https://github.com/parkeraddison/generating-and-analyzing-netw
 
 <a name="conditions-config"></a>
 **Conditions config**
+
 | Key | Description |
 | --- | --- |
 | latency | Milliseconds. The desired amount of network latency to be injected. E.g. `"50ms"` |
@@ -46,6 +56,7 @@ See [`tool.json`](https://github.com/parkeraddison/generating-and-analyzing-netw
 
 <a name="vpn-config"></a>
 **VPN config**
+
 | Key | Description |
 | --- | --- |
 | enabled | `true` or `false`. Whether or not a VPN should be used. **WIP** |
@@ -82,6 +93,29 @@ make stop
 
 After the tool has been stopped, data can be found in `data/`.
 
+
+### FAQ
+
+1. **The tool isn't working. It fails silently, or fails to launch behaviors or network-stats.**
+   Make sure that all submodules have been cloned. You can do this by running
+   ```bash
+   git submodule update --init --recursive
+   ```
+
+### Citing
+
+If you choose to use this tool, please cite it with the following BibTeX entry: **WIP**
+```bibtex
+@misc{tbd2021,
+  author = {Addison, Parker and
+            Altekar, Sahil and
+            Yaseen, Danial},
+  title  = {tbd},
+  school = {University of California, San Diego},
+  year   = 2021,
+  url    = {https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions}
+}
+```
 
 # Analysis
 TODO
