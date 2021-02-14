@@ -79,7 +79,8 @@ make stop
 
 #### Example
 
-![](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions/blob/main/docs/media/demo.gif)
+<img src="https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions/blob/main/docs/media/demo.gif">
+![]()
 
 ### Data
 
