@@ -1,5 +1,5 @@
 # Background
-Todo
+TODO
 
 # Tool
 Our tool establishes Docker containers with configurable network conditions,
@@ -19,18 +19,17 @@ The data collcetion tool runs on Linux. You will need:
 
 ## Configuration
 See [tool.json](tool.json) for configuration:
+
 | Key | Description |
 | --- | --- |
 | behaviors | List of one or more target behaviors. All target behaviors will be
-run for each specified set of network conditions. For possible values see 
-[Target
-behaviors](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions#target-behaviors).
-|
+run for each specified set of network conditions. For possible values see [Target behaviors](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions#target-behaviors). |
 | conditions | TODO |
 | vpn | TODO |
 
 ## Setup
+TODO
 
 # Analysis
-
+TODO
 
