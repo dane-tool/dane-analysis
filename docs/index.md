@@ -79,7 +79,7 @@ make stop
 
 #### Example
 
-![](docs/media/demo.gif)
+![](https://github.com/parkeraddison/generating-and-analyzing-network-traffic-in-diverse-network-conditions/blob/main/docs/media/demo.gif)
 
 ### Data
 
