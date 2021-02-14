@@ -1,6 +1,7 @@
 <h1 align="center"><b>Generating and Analyzing Network Traffic in Diverse
 Network Conditions</b> </h1>
 <hr>
+
 # Background
 TODO
 
@@ -120,6 +121,11 @@ If you choose to use this tool, please cite it with the following BibTeX entry: 
 }
 ```
 
+# Data Collection
+TODO
+
 # Analysis
 TODO
 
+# Conclusion
+TODO
