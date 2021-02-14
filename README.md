@@ -4,4 +4,4 @@ streaming and browsing.
 
 Analysis and documentation to support the use of our data generation tool
 available
-[here](https://parkeraddison.com/generating-and-analyzing-network-traffic-in-diverse-network-conditions/).
+[here](https://parkeraddison.github.io/generating-and-analyzing-network-traffic-in-diverse-network-conditions/).
